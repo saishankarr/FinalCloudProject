@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Profile
+        </title>
+        
+        <style>
+    
+    body{
+        background-color: aliceblue;
+    }
+        
+    .btn {  
+            float: right;
+            background-color: #ff00c873;
+            color: white;
+            padding: 10px 10px;
+            margin-top: 1px;
+            margin-right: 2px;
+            border: none;
+            text-decoration:none;
+            border-radius: 30px;
+            font-size: 15px; 
+            
+            }
+
+            .btns {  
+            align-items: center;
+            background-color: #ff00c873;
+            color: white;
+            font-size: larger;
+            padding: 1rem 2rem;
+            margin-top: 1px;
+            margin-right: 2rem;
+            border: none;
+            text-decoration:none;
+                
+            border-radius: 30px;
+            font-size: 15px; 
+            
+            }
+
+.vertical-center {
+  margin: 5rem 20rem;
+  position: top;
+  align-content: center;
+  display: flex;
+  align-content:space-between ;
+  text-align: center;
+  justify-content: center;
+}
+
+h1{
+text-align: center;
+color: blueviolet;
+}
+
+</style>
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    </head>
+
+
+<body>
+
+    
+
+    
+    <div>
+     <a class="btn" href="{{ url_for('logout')}}">logout</a> 
+     
+        <br>
+        <br>
+    </div>
+
+    <div>
+    </br>
+       <h1>Welcome {{ username }}</h1>
+      
+  </div>
+ 
+    <div class="vertical-center">
+      
+            <a class="btns" href="{{ url_for('dashboard')}}">Dashboard</a>
+            <a class="btns" href="{{ url_for('Search')}}"> SearchData </a>
+            <a class="btns" href="{{ url_for('upload')}}"> Upload Data</a>
+            <br>
+            <br>
+        
+    </div>
+
+
+</body>
+</html>

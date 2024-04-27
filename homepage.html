@@ -1,0 +1,71 @@
+<!-- Store this code in 'login.html' file inside the 'templates' folder -->
+
+<html> 
+	<head> 
+		<meta charset="UTF-8"> 
+		<title> Login </title> 
+		<style>
+            body {font-family: Arial, Helvetica, sans-serif;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 100%;
+                width: 100%;}
+            form {
+                /* border: 3px solid #f1f1f1;
+                background-color: #f2f2f2;
+                border-radius: 5px; */
+                padding: 20px;
+                width: 50%;}
+
+            input[type=text], input[type=password] {
+            width: 50%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            }
+            .msg{
+                color:#f5140c;
+            }
+
+            .btn {
+            background-color: #ff00c873;
+            color: white;
+            margin: 8px 0;
+            cursor: pointer;
+            padding: 14px 20px;
+            border: none;
+            width: 40%;
+            border-radius: 30px;
+            justify-content: center;
+            }
+
+            .container {
+            padding: 16px;
+            }
+
+
+            span.psw {
+            float: right;
+            padding-top: 16px;
+            }
+        </style>		 
+	</head> 
+	<body style="background-image: url('./static/cloud.jpg');"></br></br></br></br></br> 
+		<div align="center" class="container"> 
+            
+				<form action="{{ url_for('homepage') }}" method="post" style="width: 50%;"> 
+                    <h2>Login</h2>
+                    <div class="msg">{{ msg }}</div>
+                    <label><b>Username</b> </label>
+					<input id="username" name="username" type="text" placeholder="Enter Your Username" class="textbox" style="border-radius: 30px;width: 50%;" required/></br></br> 
+					<label><b>Password </b></label>
+                    <input id="password" name="password" type="password" placeholder="Enter Your Password" class="textbox" style="border-radius: 30px;" required/></br></br></br> 
+					<input type="submit" class="btn" value="Sign In"></br></br>
+                    <p class="bottom">Don't have an account?  <a class="bottom" href="{{ url_for('register')}}"> Register Here</a></p> 
+				</form> 
+		</div> 
+	</body> 
+</html> 
